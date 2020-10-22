@@ -1567,7 +1567,7 @@
 	}
 
 	body {
-		background: #1b1b1b;
+		background: #ffffff;
 	}
 
 		body.is-loading *, body.is-loading *:before, body.is-loading *:after {
@@ -1583,6 +1583,11 @@
 
 	.inner {
 		width: 60em;
+	}
+
+
+	.reader {
+		width: 100%;
 	}
 
 	@media screen and (max-width: 1280px) {
@@ -1612,8 +1617,7 @@
 /* Type */
 
 	body {
-		background-color: #1b1b1b;
-		color: rgba(255, 255, 255, 0.75);
+		color: rgb(255, 255, 255);
 	}
 
 	body, input, select, textarea {
@@ -1811,7 +1815,6 @@
 /* Box */
 
 	.box {
-		background: rgba(0, 0, 0, 0.5);
 		border-radius: 4px;
 		margin-bottom: 2em;
 		overflow: hidden;
@@ -3607,7 +3610,7 @@
 		position: relative;
 		text-align: center;
         overflow: hidden;
-        background: rgb(255, 24, 24);;
+        background: rgb(255, 255, 255);
 	}
 
 		#banner .inner {
@@ -3746,7 +3749,7 @@
 			transition-delay: 1.25s;
 			content: '';
 			display: block;
-			background-color: #000;
+			background-color: #ffff;
 			height: 100%;
 			left: 0;
 			opacity: 0.45;
@@ -3811,6 +3814,30 @@
         background-image: url("fire.jpg");
     }
 
+/* Two */
+	#two {
+		background-image: url("sky.jpg");
+	}
+
+/* Three */
+	.pdfsection {
+		width: 100%;
+		height: 65em;
+		background-color: #000;
+		flex: 1;
+		text-align: center;
+		
+	}
+
+	.readercontainer {
+		padding: 3.5em;
+		height: inherit;
+	}
+
+	.reader {
+		width: 75%;
+		height: 50em;
+	}
 
 /* Banner */
 

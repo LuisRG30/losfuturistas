@@ -1612,7 +1612,6 @@
 /* Type */
 
 	body {
-		background-color: #1b1b1b;
 		color: rgba(255, 255, 255, 0.75);
 	}
 
@@ -3736,17 +3735,16 @@
 			}
 
 		#banner:before {
-			-moz-transition: opacity 3s ease;
-			-webkit-transition: opacity 3s ease;
-			-ms-transition: opacity 3s ease;
-			transition: opacity 3s ease;
+			-moz-transition: opacity 1s ease;
+			-webkit-transition: opacity 1s ease;
+			-ms-transition: opacity 1s ease;
+			transition: opacity 1s ease;
 			-moz-transition-delay: 1.25s;
 			-webkit-transition-delay: 1.25s;
 			-ms-transition-delay: 1.25s;
 			transition-delay: 1.25s;
 			content: '';
 			display: block;
-			background-color: #000;
 			height: 100%;
 			left: 0;
 			opacity: 0.45;
@@ -3754,6 +3752,7 @@
 			top: 0;
 			width: 100%;
 			z-index: 1;
+			background-color: #ffffff;
 		}
 
 		@media screen and (max-width: 980px) {
