@@ -1585,6 +1585,10 @@
 		width: 60em;
 	}
 
+	.readerinner {
+		width: 80em;
+	}
+
 
 	.reader {
 		width: 100%;
@@ -1818,7 +1822,7 @@
 		border-radius: 4px;
 		margin-bottom: 2em;
 		overflow: hidden;
-		padding: 4em;
+		padding: 4em;|
 	}
 
 		.box > :last-child,
@@ -3820,6 +3824,20 @@
 	}
 
 /* Three */
+
+	#three {
+		background-image: url("black.jpg");
+	}
+
+	#toread {
+		font-size: 5em;
+	}
+
+	#four {
+		background-image: url("dollar.jpg");
+	}
+
+/* Readers */
 	.pdfsection {
 		width: 100%;
 		height: 65em;

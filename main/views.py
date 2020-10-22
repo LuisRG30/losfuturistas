@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from django.views.generic import View
 
 # Create your views here.
-def index(request):
-    return render(request, "main/index.html")
+class HomeView(View):
+    def get(self, *args, **kwargs):
+        return render(self.request, "main/index.html")
