@@ -5,3 +5,7 @@ from django.views.generic import View
 class HomeView(View):
     def get(self, *args, **kwargs):
         return render(self.request, "main/index.html")
+
+class PublishView(View):
+    def get(self, *args, **kwargs):
+        return render(self.request, "main/publica.html")
