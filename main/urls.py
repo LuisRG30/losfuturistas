@@ -4,5 +4,6 @@ app_name = "main"
 from .views import *
 urlpatterns = [
     path("", HomeView.as_view(), name="index"),
-    path("publish", PublishView.as_view(), name="publish")
+    path("publish", PublishView.as_view(), name="publish"),
+    path("profile", ProfileView.as_view(), name="profile")
 ]

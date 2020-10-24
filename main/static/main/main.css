@@ -4263,10 +4263,10 @@
 /* Footer */
 
 	#footer {
-		background-color: #F64747;
-		color: #fdd1d1;
+		background-color: #000000;
+		color: #ffffff;
 		padding: 6em 0 4em 0;
-		background: #F64747;
+		background: #000000;
 	}
 
 		#footer input, #footer select, #footer textarea {
@@ -4354,7 +4354,7 @@
 				#footer input[type="button"].alt.icon:before,
 				#footer button.alt.icon:before,
 				#footer .button.alt.icon:before {
-					color: #fbb5b5;
+					color: #ffffff;
 				}
 
 			#footer input[type="submit"].special,
@@ -4363,7 +4363,7 @@
 			#footer button.special,
 			#footer .button.special {
 				background-color: #ffffff;
-				color: #F64747 !important;
+				color: #ffffff !important;
 			}
 
 		#footer label {
@@ -4407,7 +4407,7 @@
 		#footer input[type="radio"]:checked + label:before {
 			background-color: #ffffff;
 			border-color: #ffffff;
-			color: #F64747;
+			color: #ffffff;
 		}
 
 		#footer input[type="checkbox"]:focus + label:before,
@@ -4513,3 +4513,87 @@
 			}
 
 		}
+
+	/* Profile */
+
+      h2 {
+        font-size: 3em;
+      }
+
+      .info {
+        font-size: 1.5em;
+      }
+
+      .main-head{
+          height: 150px;
+          background: #FFF;
+        
+      }
+
+      .sidenav {
+          height: 100%;
+          background-color: #000;
+          overflow-x: hidden;
+          padding-top: 20px;
+      }
+
+
+      .main {
+          padding: 0px 10px;
+      }
+
+      @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+      }
+
+      @media screen and (max-width: 450px) {
+          .login-form{
+              margin-top: 10%;
+          }
+
+          .register-form{
+              margin-top: 10%;
+          }
+      }
+
+      @media screen and (min-width: 768px){
+          .main{
+              margin-left: 40%; 
+          }
+
+          .sidenav{
+              width: 40%;
+              position: fixed;
+              z-index: 1;
+              top: 0;
+              left: 0;
+          }
+
+          .login-form{
+              margin-top: 80%;
+          }
+
+          .register-form{
+              margin-top: 20%;
+          }
+      }
+
+
+      .login-main-text{
+          margin-top: 20%;
+          padding: 60px;
+          color: #fff;
+      }
+
+      .login-main-text h2{
+          font-weight: 300;
+      }
+
+      .btn-black{
+          background-color: #000 !important;
+          color: #fff;
+	  }
+	  
+	  .rightaccount {
+		  padding: 4em;
+	  }
