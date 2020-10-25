@@ -9,6 +9,15 @@
 
 /* Reset */
 
+	html, body {
+		height: 100%;
+	}
+
+	.wrapper {
+		height: 100%;
+		overflow: hidden;
+	}
+
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
 		padding: 0;
@@ -1567,7 +1576,7 @@
 	}
 
 	body {
-		background: #1b1b1b;
+		background: #ffffff;
 	}
 
 		body.is-loading *, body.is-loading *:before, body.is-loading *:after {
@@ -1583,6 +1592,15 @@
 
 	.inner {
 		width: 60em;
+	}
+
+	.readerinner {
+		width: 80em;
+	}
+
+
+	.reader {
+		width: 100%;
 	}
 
 	@media screen and (max-width: 1280px) {
@@ -1612,7 +1630,7 @@
 /* Type */
 
 	body {
-		color: rgba(255, 255, 255, 0.75);
+		color: rgb(255, 255, 255);
 	}
 
 	body, input, select, textarea {
@@ -1809,8 +1827,15 @@
 
 /* Box */
 
+	.blackbox {
+		border-radius: 4px;
+		margin-bottom: 2em;
+		overflow: hidden;
+		padding: 4em;
+		background: #000;
+	}
+
 	.box {
-		background: rgba(0, 0, 0, 0.5);
 		border-radius: 4px;
 		margin-bottom: 2em;
 		overflow: hidden;
@@ -3320,18 +3345,16 @@
 	}
 
 	#header {
-		background-color: transparent;
-		color: #fdd1d1;
+		background-color: rgba(0, 0, 0, 0.507);
+		color: #fdfdfd;
 		cursor: default;
 		height: 3.25em;
 		left: 0;
 		line-height: 3.25em;
 		position: fixed;
 		text-align: right;
-		top: 1em;
 		width: 100%;
 		z-index: 10001;
-		padding: 0 1.5em;
 	}
 
 		#header.alt {
@@ -3606,7 +3629,7 @@
 		position: relative;
 		text-align: center;
         overflow: hidden;
-        background: rgb(255, 24, 24);;
+        background: rgb(255, 255, 255);
 	}
 
 		#banner .inner {
@@ -3735,16 +3758,17 @@
 			}
 
 		#banner:before {
-			-moz-transition: opacity 1s ease;
-			-webkit-transition: opacity 1s ease;
-			-ms-transition: opacity 1s ease;
-			transition: opacity 1s ease;
+			-moz-transition: opacity 3s ease;
+			-webkit-transition: opacity 3s ease;
+			-ms-transition: opacity 3s ease;
+			transition: opacity 3s ease;
 			-moz-transition-delay: 1.25s;
 			-webkit-transition-delay: 1.25s;
 			-ms-transition-delay: 1.25s;
 			transition-delay: 1.25s;
 			content: '';
 			display: block;
+			background-color: #ffff;
 			height: 100%;
 			left: 0;
 			opacity: 0.45;
@@ -3752,7 +3776,6 @@
 			top: 0;
 			width: 100%;
 			z-index: 1;
-			background-color: #ffffff;
 		}
 
 		@media screen and (max-width: 980px) {
@@ -3804,12 +3827,68 @@
 		body.is-loading #banner:before {
 			opacity: 1;
 		}
+	
+	#nav {
+		margin-left: 6em;
+		margin-right: 4em;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.fixop {
+		text-decoration: none;
+		color: #ffff;
+		font-family: serif;
+		font-size: 1.2em;
+	}
+
+	.onwhite {
+		color: #000;
+	}
 
 /* One */
     #one {
         background-image: url("fire.jpg");
     }
 
+/* Two */
+	#two {
+		background-image: url("sky.jpg");
+	}
+
+/* Three */
+
+	#three {
+		background-image: url("black.jpg");
+	}
+
+	#toread {
+		font-size: 5em;
+	}
+
+	#four {
+		background-image: url("dollar.jpg");
+	}
+
+/* Readers */
+	.pdfsection {
+		width: 100%;
+		height: 65em;
+		background-color: #000;
+		flex: 1;
+		text-align: center;
+		
+	}
+
+	.readercontainer {
+		padding: 3.5em;
+		height: inherit;
+	}
+
+	.reader {
+		width: 75%;
+		height: 50em;
+	}
 
 /* Banner */
 
@@ -4184,10 +4263,10 @@
 /* Footer */
 
 	#footer {
-		background-color: #F64747;
-		color: #fdd1d1;
+		background-color: #000000;
+		color: #ffffff;
 		padding: 6em 0 4em 0;
-		background: #F64747;
+		background: #000000;
 	}
 
 		#footer input, #footer select, #footer textarea {
@@ -4275,7 +4354,7 @@
 				#footer input[type="button"].alt.icon:before,
 				#footer button.alt.icon:before,
 				#footer .button.alt.icon:before {
-					color: #fbb5b5;
+					color: #ffffff;
 				}
 
 			#footer input[type="submit"].special,
@@ -4284,7 +4363,7 @@
 			#footer button.special,
 			#footer .button.special {
 				background-color: #ffffff;
-				color: #F64747 !important;
+				color: #ffffff !important;
 			}
 
 		#footer label {
@@ -4328,7 +4407,7 @@
 		#footer input[type="radio"]:checked + label:before {
 			background-color: #ffffff;
 			border-color: #ffffff;
-			color: #F64747;
+			color: #ffffff;
 		}
 
 		#footer input[type="checkbox"]:focus + label:before,
@@ -4434,3 +4513,87 @@
 			}
 
 		}
+
+	/* Profile */
+
+      h2 {
+        font-size: 3em;
+      }
+
+      .info {
+        font-size: 1.5em;
+      }
+
+      .main-head{
+          height: 150px;
+          background: #FFF;
+        
+      }
+
+      .sidenav {
+          height: 100%;
+          background-color: #000;
+          overflow-x: hidden;
+          padding-top: 20px;
+      }
+
+
+      .main {
+          padding: 0px 10px;
+      }
+
+      @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+      }
+
+      @media screen and (max-width: 450px) {
+          .login-form{
+              margin-top: 10%;
+          }
+
+          .register-form{
+              margin-top: 10%;
+          }
+      }
+
+      @media screen and (min-width: 768px){
+          .main{
+              margin-left: 40%; 
+          }
+
+          .sidenav{
+              width: 40%;
+              position: fixed;
+              z-index: 1;
+              top: 0;
+              left: 0;
+          }
+
+          .login-form{
+              margin-top: 80%;
+          }
+
+          .register-form{
+              margin-top: 20%;
+          }
+      }
+
+
+      .login-main-text{
+          margin-top: 20%;
+          padding: 60px;
+          color: #fff;
+      }
+
+      .login-main-text h2{
+          font-weight: 300;
+      }
+
+      .btn-black{
+          background-color: #000 !important;
+          color: #fff;
+	  }
+	  
+	  .rightaccount {
+		  padding: 4em;
+	  }
