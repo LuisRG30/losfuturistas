@@ -2,6 +2,7 @@ from django.db.models.signals import post_save
 from django.conf import settings
 from django.db import models
 from django.contrib.auth.models import User
+from django.shortcuts import reverse
 
 # Create your models here.
 class Profile(models.Model):
@@ -28,12 +29,36 @@ class Text(models.Model):
     author = models.CharField(max_length=50)
     publication_date = models.DateField()
     sinopsis = models.TextField(max_length=1000)
+    image = models.FileField(null=True, blank=True)
+    pdf_file = models.FileField(null=True, blank=True)
+    slug = models.SlugField()
+
+    class Meta:
+        get_latest_by = 'publication_date'
+
+
 
 class Issue(Text):
-    pass
+    
+    def __str__(self):
+        return f"{self.author}, {self.title}, {self.publication_date}"
+
+    def get_absolute_url(self):
+        return reverse("main:issue", kwargs={
+            'slug': self.slug
+        })
+
 
 class Work(Text):
     display = models.BooleanField()
+
+    def __str__(self):
+        return f"{self.author}, {self.title}, {self.publication_date}"
+
+    def get_absolute_url(self):
+        return reverse("main:work", kwargs={
+            'slug': self.slug
+        })
 
 
 

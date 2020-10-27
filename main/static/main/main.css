@@ -1698,6 +1698,7 @@
 
 	p {
 		margin: 0 0 2em 0;
+		color: #ffff;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -1830,9 +1831,19 @@
 	.blackbox {
 		border-radius: 4px;
 		margin-bottom: 2em;
-		overflow: hidden;
 		padding: 4em;
 		background: #000;
+		width: 90%;
+		height: auto;
+	}
+
+	.blackboxarchive {
+		border-radius: 4px;
+		margin-bottom: 2em;
+		padding: 4em;
+		background: #000;
+		width: 40%;
+		height: auto;
 	}
 
 	.box {
@@ -3870,6 +3881,10 @@
 		background-image: url("dollar.jpg");
 	}
 
+	#archive {
+		background-image: url("paint.jpg");
+	}
+
 /* Readers */
 	.pdfsection {
 		width: 100%;
@@ -4074,6 +4089,10 @@
 			z-index: 1;
 		}
 
+		.noop:before {
+			opacity: 1;
+		}
+
 	@-moz-keyframes more {
 		0% {
 			bottom: -3em;
@@ -4115,7 +4134,7 @@
 	}
 
 		.post .more {
-			background-color: rgba(255, 255, 255, 0.15);
+			background-color: rgba(48, 47, 47, 0.15);
 			border: 0;
 			border-radius: 1em 1em 0 0;
 			bottom: -3em;
@@ -4597,3 +4616,58 @@
 	  .rightaccount {
 		  padding: 4em;
 	  }
+
+
+/* Cards */
+
+.cardwrapper {
+	padding: 5em;
+	display: flex;
+	height: 100%;
+	flex-wrap: wrap;
+	background-image: url("paint.jpg");
+}
+
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.384);
+	transition: 0.3s;
+	width: 18em;
+	height: fit-content;
+	margin: 0.5em;
+	background: #000000;
+	font-family: serif;
+  }
+  
+  .card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.233);
+  }
+  
+  .carddetails {
+	padding: 0.5em;
+	color: #ffff;
+  }
+
+  .carddetails p {
+	 margin: 0;
+  }
+
+  .carddetails h4, .carddetails h5 {
+	  margin: 0;
+  }
+
+.carddetails a {
+	margin-top: 0.5em;
+}
+
+/*Full reader */
+
+.fullreader {
+	height: 100%;
+	padding: 6em;
+}
+
+.fullreader h1 {
+	color: rgb(0, 0, 0);
+	font-family: serif;
+	font-size: 4em;
+}

@@ -1,0 +1,22 @@
+{% extends "main/layout.html" %}
+{% load static %}
+
+{% block body %}
+<section id="archive" class="wrapper post">
+    <div class="inner flex">
+        <article class="blackboxarchive">
+            <h1>Revista</h1>
+            <footer>
+                <a href="{% url 'main:issues' %}" class="button alt">Acceder</a>
+            </footer>
+        </article>
+        <article class="blackboxarchive">
+            <h1>Obras</h1>
+            <footer>
+                <a href="{% url 'main:works' %}" class="button alt">Acceder</a>
+            </footer> 
+        </article>
+    </div> 
+</section>
+
+{% endblock %}

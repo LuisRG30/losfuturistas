@@ -42,10 +42,11 @@ the background image.
                 <h2>Última Publicación</h2>
             </header>
             <div class="content">
-                <p>SINOPSIS SINOPSIS SINOPSIS</p>
+                <h1>{{ last_issue.title }}</h1>
+                <p>{{ last_issue.sinopsis }}</p>
             </div>
             <footer>
-                <a href="generic.html" class="button alt">Leer Más</a>
+                <a href="{{ last_issue.get_absolute_url }}" class="button alt">Leer Más</a>
             </footer>
         </article>
     </div>
@@ -63,19 +64,25 @@ the background image.
 </section>
 
 <!-- Repeat -->
-<section class="wrapper post bg-img repeat" data-bg="banner5.jpg">
+{% for displayable in displayables %}
+<section class="wrapper post bg-img noop" {% if displayable.image %} style="background-image: url({{ displayable.image.url }})" {% endif %}>
     <div class="readerinner inner">
         <article class="box">
             <header>
-                <h2>Título Publicación</h2>
-                <p>Autor</p>
+                <h2>{{ displayable.title }}</h2>
+                <h3>{{ displayable.subtitle }}</h3>
+                <p>{{ displayable.author }}</p>
             </header>
             <div class="content">
-                <p>MUCHO TEXTO MUCHO TEXTO MUCHO TEXTO MUCHO TEXTO MUCHO TEXTO MUCHO TEXTO MUCHO TEXTO MUCHO TEXTO MUCHO TEXTO MUCHO TEXTO MUCHO TEXTO MUCHO TEXTO MUCHO TEXTO MUCHO TEXTO MUCHO TEXTO MUCHO TEXTO </p>
+                <p>{{ displayable.sinopsis }}</p>
             </div>
+            <footer>
+                <a href="{{ displayable.get_absolute_url }}" class="button alt">Acceder</a>
+            </footer>
         </article>
     </div>
 </section>
+{% endfor %}
 <!-- Four -->
 <section id="four" class="wrapper post bg-img">
     <div class="inner">
@@ -87,7 +94,7 @@ the background image.
                 <p>Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate a duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in tincidunt tristique enim arcu litora scelerisque eros suspendisse.</p>
             </div>
             <footer>
-                <a href="generic.html" class="button alt">Acceder</a>
+                <a href="{% url 'main:archive' %}" class="button alt">Acceder</a>
             </footer>
         </article>
     </div>
