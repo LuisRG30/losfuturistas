@@ -9,7 +9,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Profile, Work, Issue
 
-from .serializers import WorkSerializer
+from .serializers import IssueSerializer, WorkSerializer
 from rest_framework import generics, permissions, renderers, viewsets
 
 utc = pytz.UTC
@@ -70,6 +70,10 @@ class ProfileView(LoginRequiredMixin, View):
 
 
 #Api views
+class IssueViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Issue.objects.all()
+    serializer_class = IssueSerializer
+
 class WorkViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Work.objects.all()
     serializer_class = WorkSerializer

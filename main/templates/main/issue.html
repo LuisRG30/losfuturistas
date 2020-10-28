@@ -2,7 +2,18 @@
 {% load static %}
 
 {% block body %}
+<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.5.207/build/pdf.min.js"></script>
 <div class="fullreader">
     <h1>Los Futuristas</h1>
+    <h2>{{ object.title }}</h2>
+    <h3>{{ object.subtitle}}</h3>
+    <h3>{{ object.author }}</h3>
+    <p>{{ object.publication_date }}</p>
+    <p>{{ object.sinopsis }}</p>
+
+    <canvas id="my-canvas"></canvas>
+
+    <a href="{{ object.pdf_file.url }}" class="button" target="popup">Descargar</a>
+    <script src="{% static 'main/renderer.js' %}"></script>
 </div>
 {% endblock %}

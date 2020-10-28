@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url(font-awesome.min.css);
 
 /*
 	Road Trip by TEMPLATED
@@ -4670,4 +4669,21 @@
 	color: rgb(0, 0, 0);
 	font-family: serif;
 	font-size: 4em;
+}
+
+.fullreader h2 {
+	color: rgb(0, 0, 0);
+	font-family: serif;
+	font-size: 3em;
+}
+
+.fullreader h3 {
+	color: rgb(0, 0, 0);
+	font-family: serif;
+	font-size: 2em;
+}
+
+.fullreader p {
+	color: rgb(0, 0, 0);
+	font-family: serif;
 }

@@ -7,6 +7,7 @@ from .views import *
 
 #Create a router for api viewsets
 router = DefaultRouter()
+router.register(r'issues', IssueViewSet)
 router.register(r'works', WorkViewSet)
 
 
