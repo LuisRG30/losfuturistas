@@ -4,7 +4,7 @@ console.log(url);
 
 var loadingTask = pdfjsLib.getDocument(url)
 loadingTask.promise.then(function(pdf) {
-    pdf.getPage(5).then(page => {
+    pdf.getPage(1).then(page => {
         var myCanvas = document.getElementById('my-canvas');
         var context = myCanvas.getContext('2d');
 

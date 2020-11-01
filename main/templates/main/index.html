@@ -46,7 +46,7 @@ the background image.
                 <p>{{ last_issue.sinopsis }}</p>
             </div>
             <footer>
-                <a href="{{ last_issue.get_absolute_url }}" class="button alt">Leer Más</a>
+                <a href="{{ last_issue.pdf_file.url }}" class="button alt" target=popup>Leer Más</a>
             </footer>
         </article>
     </div>
@@ -77,7 +77,7 @@ the background image.
                 <p>{{ displayable.sinopsis }}</p>
             </div>
             <footer>
-                <a href="{{ displayable.get_absolute_url }}" class="button alt">Acceder</a>
+                <a href="" class="button alt">Acceder</a>
             </footer>
         </article>
     </div>

@@ -8,7 +8,8 @@ from django.shortcuts import reverse
 class Profile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     membership_due_date = models.DateTimeField(blank=True, null=True)
-    stripe_customer_id = models.CharField(max_length=50, blank=True, null=True)
+    stripe_customer_id = models.CharField(max_length=255, blank=True, null=True)
+    stripe_subscription_id = models.CharField(max_length=255, blank=True, null=True)
 
     def __str__(self):
         return f"{self.user.username}"
@@ -22,6 +23,13 @@ class Message(models.Model):
     def __str__(self):
         return f"{self.name}  {self.email}"
 
+class Label(models.Model):
+    name = models.CharField(max_length=32)
+    active = models.BooleanField()
+    staff_only = models.BooleanField()
+
+    def __str__(self):
+        return f"{self.name}"
 
 class Text(models.Model):
     title = models.CharField(max_length=100)
@@ -29,9 +37,10 @@ class Text(models.Model):
     author = models.CharField(max_length=50)
     publication_date = models.DateField()
     sinopsis = models.TextField(max_length=1000)
-    image = models.FileField(null=True, blank=True)
-    pdf_file = models.FileField(null=True, blank=True)
+    image = models.FileField(null=True, blank=True, upload_to="public")
+    pdf_file = models.FileField(null=True, blank=True, upload_to="protected")
     slug = models.SlugField()
+    label = models.ManyToManyField(Label, blank=True, null=True)
 
     class Meta:
         get_latest_by = 'publication_date'
@@ -59,6 +68,8 @@ class Work(Text):
         return reverse("main:work", kwargs={
             'slug': self.slug
         })
+
+
 
 
 

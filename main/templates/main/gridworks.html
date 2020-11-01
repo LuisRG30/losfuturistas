@@ -1,0 +1,24 @@
+{% extends "main/layout.html" %}
+{% load static %}
+{% block body %}
+<div class="cardwrapper">
+  <div style="width: 100%; text-align: center;">
+    <a style="font-size: 2em;" href="{% url 'main:addwork' %}" class="button">Publica</a>
+  </div>
+    <div>
+      {% for item in object_list %}
+      <div class="card">
+          <img src="{{ item.image.url}}" alt="Avatar" style="width:100%; height: auto;">
+          <div class="carddetails">
+            <h4>{{ item.title }}</h4>
+            <h5>{{ item.subtitle }}</h5>
+            <p>{{ item.author }}</p>
+            <p>{{ item.sinopsis }}</p>
+            <a href="{{ item.pdf_file.url }}" class="button alt" target="popup">Leer Más</a>
+          </div>
+      </div>
+      {% endfor %}
+    </div>
+    
+</div>
+{% endblock %}

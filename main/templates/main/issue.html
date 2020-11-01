@@ -9,11 +9,11 @@
     <h3>{{ object.subtitle}}</h3>
     <h3>{{ object.author }}</h3>
     <p>{{ object.publication_date }}</p>
+    <a href="{{ object.pdf_file.url }}" class="button" target="popup">Descargar</a>
     <p>{{ object.sinopsis }}</p>
 
     <canvas id="my-canvas"></canvas>
 
-    <a href="{{ object.pdf_file.url }}" class="button" target="popup">Descargar</a>
     <script src="{% static 'main/renderer.js' %}"></script>
 </div>
 {% endblock %}

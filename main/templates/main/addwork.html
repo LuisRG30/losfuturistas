@@ -1,0 +1,55 @@
+{% extends "main/layout.html" %}
+{% load static %}
+{% block body %}
+<div id="main" class="container">
+    <div class="blackbox">
+        <header>
+            <h2>El lugar para tus textos.</h2>
+            <p>Contribuye</p>
+        </header>
+        <footer>
+            <div class="inner">
+        
+                <h3>Publica como Suscriptor</h3>
+        
+                <form action="#" method="post">
+        
+                    <div class="field half first">
+                        <label for="name">Título</label>
+                        <input name="name" id="name" type="text" placeholder="Name">
+                    </div>
+                    <div class="field half">
+                        <label for="email">Subtitulo *opcional</label>
+                        <input name="email" id="email" type="email" placeholder="Email">
+                    </div>
+                    <div class="field half first">
+                        <label for="name">Autor</label>
+                        <input name="name" id="name" type="text" placeholder="Name">
+                    </div>
+                    <div class="field half">
+                        <label for="email">Fecha de publicación</label>
+                        <input name="email" id="email" type="email" placeholder="Email">
+                    </div>
+                    <div class="field">
+                        <label for="message">Sinopsis</label>
+                        <textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+                    </div>
+                    <div class="field half first">
+                        <label for="name">Archivo *.pdf</label>
+                        <input name="name" id="name" type="file" placeholder="Name">
+                    </div>
+                    <div class="field half">
+                        <label for="email">Imagen *.jpg, .png</label>
+                        <input name="email" id="email" type="file" placeholder="Email">
+                    </div>
+                    <ul class="actions">
+                        <li><input value="Publicar" class="button alt" type="submit"></li>
+                    </ul>
+                </form>
+        
+            </div>
+        </footer>
+    </div>
+</div>
+
+{% endblock %}
